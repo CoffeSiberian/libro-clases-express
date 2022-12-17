@@ -26,6 +26,12 @@ const checkDirector = async (req: Request, res: Response, next: Function) => {
 const checkTeacher = async (req: Request, res: Response, next: Function) => {
 	await getBearerObj(req, res, (decode: any) => {
 		if (decode["rank"] >= 1) {
+			if (
+				(req.method === "POST" || req.method === "PUT") &&
+				decode["rank"] === 2
+			) {
+				return res.sendStatus(403);
+			}
 			req.body = [req.body, decode];
 			return next();
 		} else res.sendStatus(403);

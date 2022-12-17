@@ -61,8 +61,8 @@ export default function (app: Express) {
 	app.put("/editobjective", checkTeacher, editObjective);
 
 	app.get("/getallemployee", checkDirector, getAllEmployee);
-	app.get("/getalllessons", checkDirector, getAllLessons);
-	app.get("/getallgrades", checkDirector, getAllGrades);
+	app.get("/getalllessons", checkInspector, getAllLessons);
+	app.get("/getallgrades", checkInspector, getAllGrades);
 	app.get("/getlessonschedule/:id", checkTeacher, getLessonSchedule);
 	app.get("/getgradelessons/:id", checkDirector, getGradeLessons);
 	app.get("/getstudent/:gradeId", checkTeacher, getStudent);
