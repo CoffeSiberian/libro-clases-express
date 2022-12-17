@@ -1,0 +1,11 @@
+[Unit]
+Description=api
+After=network.target mariadb.service
+[Service]
+Type=simple
+RemainAfterExit=yes
+User=api
+WorkingDirectory=/home/api
+ExecStart=/home/api/execute.sh
+[Install]
+WantedBy=multi-user.target
