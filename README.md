@@ -13,5 +13,5 @@ openssl rsa -in jwt-key -pubout > jwt-key.pub
 Requirements *(based on what was used for development)*
 
 - Node.js v18.11.0
-- MySQL (MariaDB) 10.4.25-MariaDB
+- MySQL *(MariaDB)* 10.4.25-MariaDB
 - OpenSSL 1.1.1 *(To create the JWT credentials)*
