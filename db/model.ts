@@ -52,7 +52,7 @@ export class Observations extends Model {
 Employee.init(
 	{
 		rut: {
-			type: DataTypes.STRING(11),
+			type: DataTypes.STRING(20),
 			primaryKey: true,
 		},
 		name: {
@@ -139,7 +139,7 @@ Schedule.init(
 Student.init(
 	{
 		rut: {
-			type: DataTypes.STRING(11),
+			type: DataTypes.STRING(20),
 			primaryKey: true,
 		},
 		name: {
