@@ -1,14 +1,11 @@
-import fs from "fs";
-
-const privateJwtKey = fs.readFileSync("keys/jwt-key", "utf8");
-const publicJwtKey = fs.readFileSync("keys/jwt-key.pub", "utf8");
+import { jwtKey, jwtKeyPub } from "../helpers/config";
 
 const loadPrivate = () => {
-	return privateJwtKey;
+	return jwtKey;
 };
 
 const loadPublic = () => {
-	return publicJwtKey;
+	return jwtKeyPub;
 };
 
 export { loadPrivate, loadPublic };
