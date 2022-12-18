@@ -13,6 +13,7 @@ const db = new Sequelize(dbName, dbUserName, dbPassword, {
 	host: dbIp,
 	port: dbPort,
 	dialect: dbDialect,
+	logging:false
 });
 
 export default db;
