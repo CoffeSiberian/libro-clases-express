@@ -37,6 +37,7 @@ import getAllGrades from "./getAllGrades";
 import getLessonSchedule from "./getLessonSchedule";
 import getTeacherGrades from "./getTeacherGrades";
 import getTeacherLessons from "./getTeacherLessons";
+import getOnlyTeachers from "./getOnlyTeachers";
 
 export default function (app: Express) {
 	// app middlewares
@@ -63,6 +64,7 @@ export default function (app: Express) {
 	app.get("/getallemployee", checkDirector, getAllEmployee);
 	app.get("/getalllessons", checkInspector, getAllLessons);
 	app.get("/getallgrades", checkInspector, getAllGrades);
+	app.get("/getOnlyTeachers", checkDirector, getOnlyTeachers);
 	app.get("/getlessonschedule/:id", checkTeacher, getLessonSchedule);
 	app.get("/getgradelessons/:id", checkDirector, getGradeLessons);
 	app.get("/getstudent/:gradeId", checkTeacher, getStudent);
