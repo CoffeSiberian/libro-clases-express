@@ -24,7 +24,7 @@ This environment variable will enable an endpoint called /config to which you wi
   "rank":10
 }
 ```
-After running and being able to log in, change the environment variable to "true" so that it disables this endpoint (you can also comment out the path line for more security [here](http://https://github.com/CoffeSiberian/libro-clases-express/blob/a2bd5f93ac18fc443f93d1ee30a6b8343fc994df/routes/routes.ts#L58 "here"))
+After running and being able to log in, change the environment variable to "true" so that it disables this endpoint (you can also comment out the path line for more security [here](https://github.com/CoffeSiberian/libro-clases-express/blob/a2bd5f93ac18fc443f93d1ee30a6b8343fc994df/routes/routes.ts#L58 "here"))
 
 Requirements *(based on what was used for development)*
 
